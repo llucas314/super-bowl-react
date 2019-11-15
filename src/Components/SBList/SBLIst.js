@@ -68,6 +68,11 @@ function SBLIst() {
           {superbowl.city}, {superbowl.state}
         </small>
       </p>
+      <div className="container">
+        <h5>
+          {superbowl.team_winner} VS {superbowl.team_loser}
+        </h5>
+      </div>
     </div>
   ));
 
