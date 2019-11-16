@@ -70,7 +70,16 @@ function SBLIst() {
       </p>
       <div className="container">
         <h5>
-          {superbowl.team_winner} VS {superbowl.team_loser}
+          {superbowl.teams[0].teamName}{" "}
+          <img
+            src={superbowl.teams[0].logo}
+            alt={superbowl.teams[0].teamName + " Logo"}
+          />{" "}
+          VS {superbowl.teams[1].teamName}{" "}
+          <img
+            src={superbowl.teams[1].logo}
+            alt={superbowl.teams[1].teamName + " Logo"}
+          />
         </h5>
       </div>
     </div>
