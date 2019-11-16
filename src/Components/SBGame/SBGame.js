@@ -71,52 +71,92 @@ function SBGame(props) {
         </div>
       ) : (
         <div>
-          <h1>Superbowl {romanize(sbApi.super_bowl)}</h1>
-          <p>
-            {sbApi.venue.name},
-            <small>
-              {" "}
-              {sbApi.city}, {sbApi.state}
-            </small>
-          </p>
-          <div class="card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top"
-              src={sbApi.teams[0].logo}
-              alt={sbApi.teams[0].teamName + " Logo"}
-            />
-            <div class="card-body">
-              <h5 class="card-title">{sbApi.teams[0].teamName}</h5>
-              <p class="card-text">
-                Total points: {sbApi.winning_pts}
-                <br />
-                Coach: {sbApi.coach_winner}
-                <br />
-                Quarterback: {sbApi.qb_winner[0]}
-              </p>
-              <button href="#" class="btn btn-primary">
-                See More
-              </button>
+          .
+          <div class="container-fluid d-flex justify-content-center">
+            <h1>Superbowl {romanize(sbApi.super_bowl)}</h1>
+          </div>
+          <div className="name-date container-fluid d-flex justify-content-between">
+            <p>
+              {sbApi.venue.name},
+              <small>
+                {" "}
+                {sbApi.city}, {sbApi.state}
+              </small>
+            </p>
+            <small>Game Date | {sbApi.date}</small>
+          </div>
+          <div className="container-fluid d-flex justify-content-around align-items-center">
+            {/* Winning Team */}
+            <div class="card" style={{ width: "18rem" }}>
+              <img
+                className="card-img-top"
+                src={sbApi.teams[0].logo}
+                alt={sbApi.teams[0].teamName + " Logo"}
+              />
+              <div class="card-body">
+                <h5 class="card-title">{sbApi.teams[0].teamName}</h5>
+                <p class="card-text">
+                  Total points: {sbApi.winning_pts}
+                  <br />
+                  Coach: {sbApi.coach_winner}
+                  <br />
+                  Quarterback: {sbApi.qb_winner[0]}
+                </p>
+                <button href="#" class="btn btn-primary">
+                  See More
+                </button>
+              </div>
+            </div>
+            {/* Seperator */}
+            <div className="versus">
+              <h1>VS</h1>
+            </div>
+            {/* Losing Team */}
+            <div class="card" style={{ width: "18rem" }}>
+              <img
+                className="card-img-top"
+                src={sbApi.teams[1].logo}
+                alt={sbApi.teams[1].teamName + " Logo"}
+              />
+
+              <div class="card-body">
+                <h5 class="card-title">{sbApi.teams[1].teamName}</h5>
+                <p class="card-text">
+                  Total points: {sbApi.losing_pts}
+                  <br />
+                  Coach: {sbApi.coach_loser}
+                  <br />
+                  Quarterback: {sbApi.qb_loser[0]}
+                </p>
+                <button href="#" class="btn btn-primary">
+                  See More
+                </button>
+              </div>
             </div>
           </div>
-          <div class="card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top"
-              src={sbApi.teams[1].logo}
-              alt={sbApi.teams[1].teamName + " Logo"}
-            />
-            <div class="card-body">
-              <h5 class="card-title">{sbApi.teams[1].teamName}</h5>
-              <p class="card-text">
-                Total points: {sbApi.losing_pts}
+          {/* Game facts */}
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Game Information</h1>
+              <p class="lead">
+                Superbowl Number: {sbApi.super_bowl}
                 <br />
-                Coach: {sbApi.coach_loser}
+                Total Game Points: {sbApi.combined_pts} | Point Difference:{" "}
+                {sbApi.difference_pts}
                 <br />
-                Quarterback: {sbApi.qb_loser[0]}
+                Network: {sbApi.viewer.network}
+                <br />
+                Viewer Estimate:{" "}
+                {sbApi.viewer.avg_us_viewers
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                people
+                <br />
+                Average Ad Cost: $
+                {sbApi.viewer.ad_cost
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               </p>
-              <button href="#" class="btn btn-primary">
-                See More
-              </button>
             </div>
           </div>
         </div>
