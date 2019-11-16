@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function SBLIst() {
   const [sbApi, setSbApi] = useState([]);
@@ -59,43 +60,45 @@ function SBLIst() {
     return Array(+digits.join("") + 1).join("M") + roman;
   }
   const superbowls = sortedBowls.map(superbowl => (
-    <div
-      className="container"
-      key={superbowl.super_bowl}
-      style={{
-        backgroundImage: `url(${superbowl.venue.img})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat"
-      }}
-    >
-      <h4>Super Bowl {romanize(superbowl.super_bowl)}</h4>
-      <p>
-        {superbowl.venue.name},
-        <small>
-          {" "}
-          {superbowl.city}, {superbowl.state}
-        </small>
-      </p>
-      <div className="container">
-        <h5>
-          {superbowl.teams[0].teamName}{" "}
-          <img
-            src={superbowl.teams[0].logo}
-            alt={superbowl.teams[0].teamName + " Logo"}
-            width="150"
-            height="150"
-          />{" "}
-          VS {superbowl.teams[1].teamName}{" "}
-          <img
-            src={superbowl.teams[1].logo}
-            alt={superbowl.teams[1].teamName + " Logo"}
-            width="150"
-            height="150"
-          />
-        </h5>
+    <Link to={"/superbowls/" + superbowl._id}>
+      <div
+        className="container"
+        key={superbowl.super_bowl}
+        style={{
+          backgroundImage: `url(${superbowl.venue.img})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat"
+        }}
+      >
+        <h4>Super Bowl {romanize(superbowl.super_bowl)}</h4>
+        <p>
+          {superbowl.venue.name},
+          <small>
+            {" "}
+            {superbowl.city}, {superbowl.state}
+          </small>
+        </p>
+        <div className="container">
+          <h5>
+            {superbowl.teams[0].teamName}{" "}
+            <img
+              src={superbowl.teams[0].logo}
+              alt={superbowl.teams[0].teamName + " Logo"}
+              width="150"
+              height="150"
+            />{" "}
+            VS {superbowl.teams[1].teamName}{" "}
+            <img
+              src={superbowl.teams[1].logo}
+              alt={superbowl.teams[1].teamName + " Logo"}
+              width="150"
+              height="150"
+            />
+          </h5>
+        </div>
       </div>
-    </div>
+    </Link>
   ));
 
   return <div>{superbowls}</div>;
