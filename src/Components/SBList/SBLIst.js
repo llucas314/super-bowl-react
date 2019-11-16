@@ -74,11 +74,15 @@ function SBLIst() {
           <img
             src={superbowl.teams[0].logo}
             alt={superbowl.teams[0].teamName + " Logo"}
+            width="150"
+            height="150"
           />{" "}
           VS {superbowl.teams[1].teamName}{" "}
           <img
             src={superbowl.teams[1].logo}
             alt={superbowl.teams[1].teamName + " Logo"}
+            width="150"
+            height="150"
           />
         </h5>
       </div>
