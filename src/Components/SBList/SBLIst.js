@@ -59,10 +59,19 @@ function SBLIst() {
     return Array(+digits.join("") + 1).join("M") + roman;
   }
   const superbowls = sortedBowls.map(superbowl => (
-    <div className="container" key={superbowl.super_bowl}>
+    <div
+      className="container"
+      key={superbowl.super_bowl}
+      style={{
+        backgroundImage: `url(${superbowl.venue.img})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
       <h4>Super Bowl {romanize(superbowl.super_bowl)}</h4>
       <p>
-        {superbowl.venue},
+        {superbowl.venue.name},
         <small>
           {" "}
           {superbowl.city}, {superbowl.state}
