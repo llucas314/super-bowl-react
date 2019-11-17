@@ -87,28 +87,33 @@ function SBLIst() {
           </p>
         </div>
         <div className="container teams d-flex justify-content-center align-items-center">
-          <div className="col-5 winner d-flex flex-column justify-content-center align-items-center">
-            <h5>{superbowl.teams[0].teamName} </h5>
-            <img
-              className="left-img"
-              src={superbowl.teams[0].logo}
-              alt={superbowl.teams[0].teamName + " Logo"}
-              width="150"
-              height="150"
-            />{" "}
+          <div className="col-5 winner d-flex flex-column align-items-end">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h5>{superbowl.teams[0].teamName} </h5>
+              <img
+                className="left-img"
+                src={superbowl.teams[0].logo}
+                alt={superbowl.teams[0].teamName + " Logo"}
+                width="150"
+                height="150"
+              />
+            </div>{" "}
           </div>
           <div className="col-2 d-flex justify-content-center align-items-center versus">
             <h2>VS</h2>
           </div>
-          <div className="col-5 loser d-flex flex-column justify-content-center align-items-center">
-            <h5>{superbowl.teams[1].teamName} </h5>
-            <img
-              className="right-img"
-              src={superbowl.teams[1].logo}
-              alt={superbowl.teams[1].teamName + " Logo"}
-              width="150"
-              height="150"
-            />
+          <div className="col-5 loser d-flex flex-column align-items-start">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              {" "}
+              <h5>{superbowl.teams[1].teamName} </h5>
+              <img
+                className="right-img"
+                src={superbowl.teams[1].logo}
+                alt={superbowl.teams[1].teamName + " Logo"}
+                width="150"
+                height="150"
+              />
+            </div>
           </div>
         </div>
       </div>

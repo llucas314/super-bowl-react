@@ -72,29 +72,26 @@ function SBGame(props) {
         </div>
       ) : (
         <div className="games">
-          <div className="container-fluid d-flex justify-content-center">
-            <h1>Superbowl {romanize(sbApi.super_bowl)}</h1>
-          </div>
           <div className="name-date container-fluid d-flex justify-content-between">
-            <p>
-              {sbApi.venue.name},
-              <small>
-                {" "}
-                {sbApi.city}, {sbApi.state}
-              </small>
-            </p>
-            <small>Game Date | {sbApi.date}</small>
+            <div className="col-4 d-flex justify-content-center align-items-center">
+              <p>
+                {sbApi.venue.name},
+                <small>
+                  {" "}
+                  {sbApi.city}, {sbApi.state}
+                </small>
+              </p>
+            </div>
+            <div className="col-4 d-flex justify-content-center align-items-center">
+              <h1 className="title">Superbowl {romanize(sbApi.super_bowl)}</h1>
+            </div>
+            <div className="col-4 d-flex justify-content-center align-items-center">
+              <small className="date">Game Date | {sbApi.date}</small>
+            </div>
           </div>
           <div className="container-fluid d-flex justify-content-around align-items-center">
             {/* Winning Team */}
             <div className="col-5 d-flex justify-content-between align-items-center">
-              <div className="card" style={{ width: "18rem" }}>
-                <img
-                  className="card-img-top"
-                  src={sbApi.teams[0].logo}
-                  alt={sbApi.teams[0].teamName + " Logo"}
-                />
-              </div>
               <div className="card-body">
                 <h5 className="card-title">{sbApi.teams[0].teamName}</h5>
                 <p className="card-text">
@@ -108,6 +105,13 @@ function SBGame(props) {
                   See More
                 </button>
               </div>
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  className="card-img-top"
+                  src={sbApi.teams[0].logo}
+                  alt={sbApi.teams[0].teamName + " Logo"}
+                />
+              </div>
             </div>
             {/* Seperator */}
             <div className="col-2 d-flex justify-content-center versus">
@@ -115,6 +119,13 @@ function SBGame(props) {
             </div>
             {/* Losing Team */}
             <div className="col-5 d-flex justify-content-between align-items-center">
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  className="card-img-top"
+                  src={sbApi.teams[1].logo}
+                  alt={sbApi.teams[1].teamName + " Logo"}
+                />
+              </div>
               <div className="card-body">
                 <h5 className="card-title">{sbApi.teams[1].teamName}</h5>
                 <p className="card-text">
@@ -128,38 +139,51 @@ function SBGame(props) {
                   See More
                 </button>
               </div>
-              <div className="card" style={{ width: "18rem" }}>
-                <img
-                  className="card-img-top"
-                  src={sbApi.teams[1].logo}
-                  alt={sbApi.teams[1].teamName + " Logo"}
-                />
-              </div>
             </div>
           </div>
           {/* Game facts */}
           <div className="jumbotron jumbotron-fluid facts">
             <div className="container">
               <h1 className="display-4">Game Information</h1>
-              <p className="lead">
-                Superbowl Number: {sbApi.super_bowl}
-                <br />
-                Total Game Points: {sbApi.combined_pts} | Point Difference:{" "}
-                {sbApi.difference_pts}
-                <br />
-                Network: {sbApi.viewer.network}
-                <br />
-                Viewer Estimate:{" "}
-                {sbApi.viewer.avg_us_viewers
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-                people
-                <br />
-                Average Ad Cost: $
-                {sbApi.viewer.ad_cost
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-              </p>
+              <div className="d-flex justify-content-around align-items-center">
+                <p className="lead">
+                  Superbowl Number: {sbApi.super_bowl}
+                  <br />
+                  Total Game Points: {sbApi.combined_pts} | Point Difference:{" "}
+                  {sbApi.difference_pts}
+                  <br />
+                  Network: {sbApi.viewer.network}
+                  <br />
+                  Viewer Estimate:{" "}
+                  {sbApi.viewer.avg_us_viewers
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                  people
+                  <br />
+                  Average Ad Cost: $
+                  {sbApi.viewer.ad_cost
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </p>
+                {sbApi.halftimePerformer.length > 1 ? (
+                  <p className="lead">
+                    Pregame & Halftime Performers:{" "}
+                    <div className=" performers">
+                      {" "}
+                      {sbApi.halftimePerformer.map(performance => (
+                        <>
+                          {performance.musician}
+                          <br />
+                        </>
+                      ))}
+                    </div>
+                  </p>
+                ) : (
+                  <p>
+                    Halftime Performer: {sbApi.halftimePerformer[0].musician}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>

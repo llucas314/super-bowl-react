@@ -4,6 +4,17 @@
   color: #cdcdc0;
 }
 
+.games .title {
+  font-size: 5em;
+  color: transparent;
+  background: linear-gradient(217deg, #eec88b, #aa8a53);
+  background-clip: text;
+}
+
+.games .name-date p {
+  font-size: 1.2em;
+}
+
 .games .card {
   margin-bottom: 10px;
   border: none;
