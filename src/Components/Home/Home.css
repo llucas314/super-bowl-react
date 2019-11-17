@@ -1,12 +1,12 @@
 .home {
-  background-color: #000;
-  color: #fff;
+  background-color: #626d71;
+  color: #cdcdc0;
   height: 90vh;
 }
 
 .home .title,
 .home .sub {
-  height: 10vh;
+  height: 20vh;
 }
 
 .home .main {
@@ -34,7 +34,17 @@
 
 .home .main .info h2 {
   margin: 5px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #cdcdc0;
+}
+
+.home .main .info .btn {
+  background-color: #ddbc95;
+  border: #ddbc95;
+}
+
+.home .main .info .btn:hover {
+  background-color: #b38867;
+  border: #b38867;
 }
 
 .home .main .player {

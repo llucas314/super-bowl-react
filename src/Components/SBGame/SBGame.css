@@ -1,0 +1,31 @@
+.games {
+  max-height: 90vh;
+  background-color: #626d71;
+  color: #cdcdc0;
+}
+
+.games .card {
+  margin-bottom: 10px;
+  border: none;
+}
+
+.games .card img {
+  background-color: #626d71;
+  padding: 0 5px;
+}
+
+.games .btn {
+  background-color: #ddbc95;
+  border: #ddbc95;
+}
+
+.games .btn:hover {
+  background-color: #b38867;
+  border: #b38867;
+}
+
+.games .facts {
+  color: #000;
+  margin: 0;
+}
+/*# sourceMappingURL=SBGame.css.map */

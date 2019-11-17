@@ -5,19 +5,19 @@ import "./Home.css";
 function Home() {
   return (
     <div className="container-fluid home">
-      <div className="row">
+      {/* <div className="row">
         <div className="col-12 d-flex justify-content-center title">
           <h1>Super Bowl Center</h1>
         </div>
-      </div>
+      </div> */}
       <div className="row">
-        <div className="col-12 d-flex justify-content-center sub">
-          <h5>All the games! All the performances! All in one place!</h5>
+        <div className="col-12 d-flex justify-content-center align-items-center sub">
+          <h3>All the games! All the performances! All in one place!</h3>
         </div>
       </div>
       <div className="row main">
         <div className="col-4 player"></div>
-        <div className="col-8 info d-flex justify-content-center">
+        <div className="col-8 info d-flex justify-content-start ">
           <h2>The Super Bowl</h2>
           <p>
             The annual championship game of the National Football League has
@@ -31,7 +31,7 @@ function Home() {
           </p>
 
           <Link to="/superbowls">
-            <button className="btn btn-success">See All The Games</button>
+            <button className="btn">See All The Games</button>
           </Link>
         </div>
       </div>

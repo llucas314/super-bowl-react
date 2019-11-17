@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
+import "./SBGame.css";
 function SBGame(props) {
   const [sbApi, setSbApi] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -67,12 +68,11 @@ function SBGame(props) {
           style={{ width: "3rem", height: "3rem" }}
           role="status"
         >
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       ) : (
-        <div>
-          .
-          <div class="container-fluid d-flex justify-content-center">
+        <div className="games">
+          <div className="container-fluid d-flex justify-content-center">
             <h1>Superbowl {romanize(sbApi.super_bowl)}</h1>
           </div>
           <div className="name-date container-fluid d-flex justify-content-between">
@@ -87,58 +87,61 @@ function SBGame(props) {
           </div>
           <div className="container-fluid d-flex justify-content-around align-items-center">
             {/* Winning Team */}
-            <div class="card" style={{ width: "18rem" }}>
-              <img
-                className="card-img-top"
-                src={sbApi.teams[0].logo}
-                alt={sbApi.teams[0].teamName + " Logo"}
-              />
-              <div class="card-body">
-                <h5 class="card-title">{sbApi.teams[0].teamName}</h5>
-                <p class="card-text">
+            <div className="col-5 d-flex justify-content-between align-items-center">
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  className="card-img-top"
+                  src={sbApi.teams[0].logo}
+                  alt={sbApi.teams[0].teamName + " Logo"}
+                />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">{sbApi.teams[0].teamName}</h5>
+                <p className="card-text">
                   Total points: {sbApi.winning_pts}
                   <br />
                   Coach: {sbApi.coach_winner}
                   <br />
                   Quarterback: {sbApi.qb_winner[0]}
                 </p>
-                <button href="#" class="btn btn-primary">
+                <button href="#" className="btn ">
                   See More
                 </button>
               </div>
             </div>
             {/* Seperator */}
-            <div className="versus">
+            <div className="col-2 d-flex justify-content-center versus">
               <h1>VS</h1>
             </div>
             {/* Losing Team */}
-            <div class="card" style={{ width: "18rem" }}>
-              <img
-                className="card-img-top"
-                src={sbApi.teams[1].logo}
-                alt={sbApi.teams[1].teamName + " Logo"}
-              />
-
-              <div class="card-body">
-                <h5 class="card-title">{sbApi.teams[1].teamName}</h5>
-                <p class="card-text">
+            <div className="col-5 d-flex justify-content-between align-items-center">
+              <div className="card-body">
+                <h5 className="card-title">{sbApi.teams[1].teamName}</h5>
+                <p className="card-text">
                   Total points: {sbApi.losing_pts}
                   <br />
                   Coach: {sbApi.coach_loser}
                   <br />
                   Quarterback: {sbApi.qb_loser[0]}
                 </p>
-                <button href="#" class="btn btn-primary">
+                <button href="#" className="btn ">
                   See More
                 </button>
+              </div>
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  className="card-img-top"
+                  src={sbApi.teams[1].logo}
+                  alt={sbApi.teams[1].teamName + " Logo"}
+                />
               </div>
             </div>
           </div>
           {/* Game facts */}
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Game Information</h1>
-              <p class="lead">
+          <div className="jumbotron jumbotron-fluid facts">
+            <div className="container">
+              <h1 className="display-4">Game Information</h1>
+              <p className="lead">
                 Superbowl Number: {sbApi.super_bowl}
                 <br />
                 Total Game Points: {sbApi.combined_pts} | Point Difference:{" "}
