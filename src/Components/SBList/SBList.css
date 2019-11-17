@@ -8,6 +8,7 @@
 
 .sbList .info {
   padding: 10px 0 0 5px;
+  position: absolute;
 }
 
 .sbList h4,
@@ -25,15 +26,64 @@
   padding: 10px;
 }
 
-.sbList .teams h2 {
-  margin: 1em;
+.sbList .teams:hover h2 {
+  -webkit-animation: spin 3s linear 0s infinite;
+          animation: spin 3s linear 0s infinite;
 }
 
-.sbList .teams .left-img {
-  margin-left: 10px;
+.sbList .teams .winner {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
-.sbList .teams .right-img {
-  margin-right: 10px;
+.sbList .teams .loser {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.sbList .teams .versus h2 {
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b1a188), to(#aa8a53));
+  background: linear-gradient(#b1a188, #aa8a53);
+  background-clip: text;
+  text-align: center;
+  font-size: 5em;
+  margin: 0;
+}
+
+.sbList .teams h5 {
+  margin: 0;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 /*# sourceMappingURL=SBList.css.map */

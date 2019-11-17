@@ -28,6 +28,7 @@
 }
 
 .home .main .info .border-outer {
+  background-color: rgba(0, 0, 0, 0.2);
   border: 2px solid #ddbc95;
   padding: 10px;
 }
@@ -64,11 +65,19 @@
 .home .main .info .border-outer .border-inner .btn {
   background-color: #ddbc95;
   border: #ddbc95;
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .home .main .info .border-outer .border-inner .btn:hover {
   background-color: #b38867;
   border: #b38867;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .home .main .player {

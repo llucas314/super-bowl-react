@@ -74,7 +74,10 @@ function SBLIst() {
       >
         <div className="info">
           {" "}
-          <h4>Super Bowl {romanize(superbowl.super_bowl)}</h4>
+          <h4>
+            Super Bowl {romanize(superbowl.super_bowl)} | '
+            {superbowl.date.substr(2, 2)}
+          </h4>
           <p>
             {superbowl.venue.name},
             <small>
@@ -84,7 +87,7 @@ function SBLIst() {
           </p>
         </div>
         <div className="container teams d-flex justify-content-center align-items-center">
-          <div className="col-5 d-flex justify-content-center align-items-center">
+          <div className="col-5 winner d-flex flex-column justify-content-center align-items-center">
             <h5>{superbowl.teams[0].teamName} </h5>
             <img
               className="left-img"
@@ -94,10 +97,11 @@ function SBLIst() {
               height="150"
             />{" "}
           </div>
-          <div className="col-2">
+          <div className="col-2 d-flex justify-content-center align-items-center versus">
             <h2>VS</h2>
           </div>
-          <div className="col-5 d-flex justify-content-center align-items-center">
+          <div className="col-5 loser d-flex flex-column justify-content-center align-items-center">
+            <h5>{superbowl.teams[1].teamName} </h5>
             <img
               className="right-img"
               src={superbowl.teams[1].logo}
@@ -105,7 +109,6 @@ function SBLIst() {
               width="150"
               height="150"
             />
-            <h5>{superbowl.teams[1].teamName} </h5>
           </div>
         </div>
       </div>

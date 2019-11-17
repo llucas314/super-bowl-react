@@ -11,4 +11,14 @@
   height: 7vh;
   margin: 0 20px 0 50px;
 }
+
+.nav .link h2 {
+  -webkit-transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav .link h2:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 /*# sourceMappingURL=Nav.css.map */
