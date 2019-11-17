@@ -1,4 +1,14 @@
 .nav {
   height: 10vh;
+  background-color: #626d71;
+}
+
+.nav .link {
+  color: #cdcdc0;
+}
+
+.nav .link img {
+  height: 7vh;
+  margin: 0 20px 0 50px;
 }
 /*# sourceMappingURL=Nav.css.map */

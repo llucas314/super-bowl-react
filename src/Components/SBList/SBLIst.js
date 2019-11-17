@@ -84,21 +84,27 @@ function SBLIst() {
           </p>
         </div>
         <div className="container teams d-flex justify-content-center align-items-center">
-          <h5>{superbowl.teams[0].teamName} </h5>
-          <img
-            src={superbowl.teams[0].logo}
-            alt={superbowl.teams[0].teamName + " Logo"}
-            width="150"
-            height="150"
-          />{" "}
-          <h2>VS</h2>
-          <h5>{superbowl.teams[1].teamName} </h5>
-          <img
-            src={superbowl.teams[1].logo}
-            alt={superbowl.teams[1].teamName + " Logo"}
-            width="150"
-            height="150"
-          />
+          <div className="col-5 d-flex justify-content-center align-items-center">
+            <h5>{superbowl.teams[0].teamName} </h5>
+            <img
+              src={superbowl.teams[0].logo}
+              alt={superbowl.teams[0].teamName + " Logo"}
+              width="150"
+              height="150"
+            />{" "}
+          </div>
+          <div className="col-2">
+            <h2>VS</h2>
+          </div>
+          <div className="col-5 d-flex justify-content-center align-items-center">
+            <img
+              src={superbowl.teams[1].logo}
+              alt={superbowl.teams[1].teamName + " Logo"}
+              width="150"
+              height="150"
+            />
+            <h5>{superbowl.teams[1].teamName} </h5>
+          </div>
         </div>
       </div>
     </Link>
