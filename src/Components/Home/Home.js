@@ -14,14 +14,20 @@ function Home() {
         <div className="col-12 d-flex justify-content-center align-items-center sub">
           <div className="text">
             <p>ALL THE</p>
-            <p>
-              <span className="word wisteria">GAMES!</span>
-              <span className="word belize">PERFORMANCES!</span>
-              <span className="word pomegranate">STATS!</span>
-              <span className="word green">FUN!</span>
-            </p>
+            <b>
+              <div className="rotate">
+                GAMES!
+                <br />
+                PERFORMANCES!
+                <br />
+                STATS!
+                <br />
+                FUN!
+                <br />
+              </div>
+            </b>
           </div>
-          <h3>ALL THE GAMES ! ALL THE PERFORMANCES ! ALL IN ONE PLACE !</h3>
+          {/* <h3>ALL THE GAMES ! ALL THE PERFORMANCES ! ALL IN ONE PLACE !</h3> */}
         </div>
       </div>
       <div className="row main">

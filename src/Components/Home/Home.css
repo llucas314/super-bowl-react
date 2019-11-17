@@ -1,10 +1,29 @@
 .home {
   background-image: url("../../images/dave-adamson--nATH0CrkMU-unsplash.jpg");
-  background-position: top;
+  background-position: transform;
   background-blend-mode: multiply;
   background-color: #626d71;
   color: #cdcdc0;
   height: 90vh;
+}
+
+.home .text {
+  letter-spacing: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 50px;
+}
+
+.home .text b {
+  padding-left: 10px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.home .text b .rotate {
+  -webkit-animation: move 5s infinite 1s;
+          animation: move 5s infinite 1s;
 }
 
 .home .title,
@@ -85,5 +104,71 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #ffffff;
+  }
+  20% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    color: #ffffff;
+  }
+  40% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+    color: #ffffff;
+  }
+  60% {
+    -webkit-transform: translateY(-225px);
+            transform: translateY(-225px);
+    color: #ffffff;
+  }
+  80% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    color: transparent;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #ffffff;
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #ffffff;
+  }
+  20% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    color: #ffffff;
+  }
+  40% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+    color: #ffffff;
+  }
+  60% {
+    -webkit-transform: translateY(-225px);
+            transform: translateY(-225px);
+    color: #ffffff;
+  }
+  80% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    color: transparent;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #ffffff;
+  }
 }
 /*# sourceMappingURL=Home.css.map */
