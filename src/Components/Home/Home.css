@@ -8,6 +8,8 @@
 }
 
 .home .text {
+  -webkit-transform: translateX(45px);
+          transform: translateX(45px);
   letter-spacing: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,22 +112,22 @@
   0% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    color: #ffffff;
+    color: #f12424;
   }
   20% {
     -webkit-transform: translateY(-75px);
             transform: translateY(-75px);
-    color: #ffffff;
+    color: #f12424;
   }
   40% {
     -webkit-transform: translateY(-150px);
             transform: translateY(-150px);
-    color: #ffffff;
+    color: #f12424;
   }
   60% {
     -webkit-transform: translateY(-225px);
             transform: translateY(-225px);
-    color: #ffffff;
+    color: #f12424;
   }
   80% {
     -webkit-transform: translateY(-300px);
@@ -135,7 +137,7 @@
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    color: #ffffff;
+    color: #f12424;
   }
 }
 
@@ -143,22 +145,22 @@
   0% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    color: #ffffff;
+    color: #f12424;
   }
   20% {
     -webkit-transform: translateY(-75px);
             transform: translateY(-75px);
-    color: #ffffff;
+    color: #f12424;
   }
   40% {
     -webkit-transform: translateY(-150px);
             transform: translateY(-150px);
-    color: #ffffff;
+    color: #f12424;
   }
   60% {
     -webkit-transform: translateY(-225px);
             transform: translateY(-225px);
-    color: #ffffff;
+    color: #f12424;
   }
   80% {
     -webkit-transform: translateY(-300px);
@@ -168,7 +170,7 @@
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    color: #ffffff;
+    color: #f12424;
   }
 }
 /*# sourceMappingURL=Home.css.map */
