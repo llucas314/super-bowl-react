@@ -63,7 +63,7 @@ function SBLIst() {
   const superbowls = sortedBowls.map(superbowl => (
     <Link to={"/superbowls/" + superbowl._id}>
       <div
-        className="container"
+        className="container-fluid background"
         key={superbowl.super_bowl}
         style={{
           backgroundImage: `url(${superbowl.venue.img})`,
@@ -72,37 +72,39 @@ function SBLIst() {
           backgroundRepeat: "no-repeat"
         }}
       >
-        <h4>Super Bowl {romanize(superbowl.super_bowl)}</h4>
-        <p>
-          {superbowl.venue.name},
-          <small>
-            {" "}
-            {superbowl.city}, {superbowl.state}
-          </small>
-        </p>
-        <div className="container">
-          <h5>
-            {superbowl.teams[0].teamName}{" "}
-            <img
-              src={superbowl.teams[0].logo}
-              alt={superbowl.teams[0].teamName + " Logo"}
-              width="150"
-              height="150"
-            />{" "}
-            VS {superbowl.teams[1].teamName}{" "}
-            <img
-              src={superbowl.teams[1].logo}
-              alt={superbowl.teams[1].teamName + " Logo"}
-              width="150"
-              height="150"
-            />
-          </h5>
+        <div className="info">
+          {" "}
+          <h4>Super Bowl {romanize(superbowl.super_bowl)}</h4>
+          <p>
+            {superbowl.venue.name},
+            <small>
+              {" "}
+              {superbowl.city}, {superbowl.state}
+            </small>
+          </p>
+        </div>
+        <div className="container teams d-flex justify-content-center align-items-center">
+          <h5>{superbowl.teams[0].teamName} </h5>
+          <img
+            src={superbowl.teams[0].logo}
+            alt={superbowl.teams[0].teamName + " Logo"}
+            width="150"
+            height="150"
+          />{" "}
+          <h2>VS</h2>
+          <h5>{superbowl.teams[1].teamName} </h5>
+          <img
+            src={superbowl.teams[1].logo}
+            alt={superbowl.teams[1].teamName + " Logo"}
+            width="150"
+            height="150"
+          />
         </div>
       </div>
     </Link>
   ));
 
-  return <div>{superbowls}</div>;
+  return <div className="sbList">{superbowls}</div>;
 }
 
 export default SBLIst;

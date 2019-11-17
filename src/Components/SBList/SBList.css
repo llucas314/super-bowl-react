@@ -1,1 +1,31 @@
-/* No CSS *//*# sourceMappingURL=SBList.css.map */
+.sbList .background {
+  background-color: rgba(0, 0, 0, 0.753);
+  background-blend-mode: multiply;
+  margin: 1px auto;
+  border: 2px solid #a9894f;
+  border-radius: 2px;
+}
+
+.sbList .info {
+  padding: 10px 0 0 5px;
+}
+
+.sbList h4,
+.sbList h5,
+.sbList h2,
+.sbList p {
+  color: #ffffff;
+}
+
+.sbList a {
+  text-decoration: none;
+}
+
+.sbList .teams {
+  padding: 10px;
+}
+
+.sbList .teams h2 {
+  margin: 1em;
+}
+/*# sourceMappingURL=SBList.css.map */
