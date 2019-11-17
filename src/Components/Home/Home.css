@@ -1,4 +1,7 @@
 .home {
+  background-image: url("../../images/dave-adamson--nATH0CrkMU-unsplash.jpg");
+  background-position: top;
+  background-blend-mode: multiply;
   background-color: #626d71;
   color: #cdcdc0;
   height: 90vh;
@@ -24,7 +27,27 @@
   padding-right: 100px;
 }
 
-.home .main .info p {
+.home .main .info .border-outer {
+  border: 2px solid #ddbc95;
+  padding: 10px;
+}
+
+.home .main .info .border-outer .border-inner {
+  border: 2px solid #ddbc95;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .main .info .border-outer .border-inner p {
   max-width: 40vw;
   text-align: justify;
   font-size: 1.4em;
@@ -32,17 +55,18 @@
   margin: 15px 0;
 }
 
-.home .main .info h2 {
+.home .main .info .border-outer .border-inner h2 {
   margin: 5px;
+  text-align: center;
   border-bottom: 1px solid #cdcdc0;
 }
 
-.home .main .info .btn {
+.home .main .info .border-outer .border-inner .btn {
   background-color: #ddbc95;
   border: #ddbc95;
 }
 
-.home .main .info .btn:hover {
+.home .main .info .border-outer .border-inner .btn:hover {
   background-color: #b38867;
   border: #b38867;
 }

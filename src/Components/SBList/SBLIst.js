@@ -87,6 +87,7 @@ function SBLIst() {
           <div className="col-5 d-flex justify-content-center align-items-center">
             <h5>{superbowl.teams[0].teamName} </h5>
             <img
+              className="left-img"
               src={superbowl.teams[0].logo}
               alt={superbowl.teams[0].teamName + " Logo"}
               width="150"
@@ -98,6 +99,7 @@ function SBLIst() {
           </div>
           <div className="col-5 d-flex justify-content-center align-items-center">
             <img
+              className="right-img"
               src={superbowl.teams[1].logo}
               alt={superbowl.teams[1].teamName + " Logo"}
               width="150"

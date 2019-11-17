@@ -28,4 +28,12 @@
 .sbList .teams h2 {
   margin: 1em;
 }
+
+.sbList .teams .left-img {
+  margin-left: 10px;
+}
+
+.sbList .teams .right-img {
+  margin-right: 10px;
+}
 /*# sourceMappingURL=SBList.css.map */
