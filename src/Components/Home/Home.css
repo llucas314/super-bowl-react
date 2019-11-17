@@ -1,0 +1,46 @@
+.home {
+  background-color: #000;
+  color: #fff;
+  height: 90vh;
+}
+
+.home .title,
+.home .sub {
+  height: 10vh;
+}
+
+.home .main {
+  height: 70vh;
+}
+
+.home .main .info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 100px;
+}
+
+.home .main .info p {
+  max-width: 40vw;
+  text-align: justify;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin: 15px 0;
+}
+
+.home .main .info h2 {
+  margin: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+.home .main .player {
+  background-image: url("../../images/tom.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/*# sourceMappingURL=Home.css.map */
