@@ -6,6 +6,7 @@ import { Route, Switch } from "react-router-dom";
 import SBLIst from "./SBList/SBLIst";
 import SBGame from "./SBGame/SBGame";
 import Update from "./Update/Update";
+import Create from "./Create/Create";
 
 const NoMatchPage = () => {
   return <h3>404 - Not found</h3>;
@@ -26,6 +27,10 @@ class App extends Component {
           <Route
             path="/superbowls/update/:id"
             render={props => <Update {...props} />}
+          ></Route>
+          <Route
+            path="/superbowls/create"
+            render={props => <Create {...props} />}
           ></Route>
           <Route component={NoMatchPage} />
         </Switch>
