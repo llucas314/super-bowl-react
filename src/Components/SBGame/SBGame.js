@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SBGame.css";
+import { Link } from "react-router-dom";
 function SBGame(props) {
   const [sbApi, setSbApi] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -153,7 +154,8 @@ function SBGame(props) {
           {/* Game facts */}
           <div className="jumbotron jumbotron-fluid facts">
             <div className="container">
-              <h1 className="display-4">Game Information</h1>
+              <h1 className="display-4">Game Information</h1>{" "}
+              <Link to={"/superbowls/update/" + sbApi._id}>Update Info</Link>
               <div className="d-flex justify-content-around align-items-center">
                 <p className="lead">
                   Superbowl Number: {sbApi.super_bowl}

@@ -12,9 +12,18 @@ function Nav() {
           <h2>Super Bowl Center</h2>
         </Link>
 
-        <Link to="/superbowls" className="link d-flex align-items-center">
-          <h2>Games</h2>
-        </Link>
+        <div className="d-flex justify-content-around align-items-center">
+          <Link to="/superbowls" className="link d-flex align-items-center">
+            <h2>Games</h2>
+          </Link>{" "}
+          <h2>|</h2>
+          <Link
+            to="/superbowls/create"
+            className="link d-flex align-items-center"
+          >
+            <h2>Add A New Game</h2>
+          </Link>
+        </div>
       </nav>
     </div>
   );
