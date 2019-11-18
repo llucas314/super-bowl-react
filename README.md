@@ -2,6 +2,8 @@
 
 This repository is a website about Super Bowl Facts. It pulls information from an API that I built with ExpressJS and MongoDB.
 
+[Check out the site here](https://eager-raman-2f4f42.netlify.com/)
+
 ## Screenshots
 
 ![superBowl](./src/images/homepage.png)
