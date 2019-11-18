@@ -4,6 +4,7 @@ import "./SBList.css";
 
 function SBLIst() {
   const [sbApi, setSbApi] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
   useEffect(() => {
     if (sbApi.length === 0) {
       fetchApi();
@@ -60,11 +61,12 @@ function SBLIst() {
     while (i--) roman = (key[+digits.pop() + i * 10] || "") + roman;
     return Array(+digits.join("") + 1).join("M") + roman;
   }
+  sortedBowls.forEach(superbowl => (superbowl.isSearchable = true));
+
   const superbowls = sortedBowls.map(superbowl => (
-    <Link to={"/superbowls/games/" + superbowl._id}>
+    <Link to={"/superbowls/games/" + superbowl._id} key={superbowl.super_bowl}>
       <div
         className="container-fluid background"
-        key={superbowl.super_bowl}
         style={{
           backgroundImage: `url(${superbowl.venue.img})`,
           backgroundPosition: "center",
@@ -120,7 +122,16 @@ function SBLIst() {
     </Link>
   ));
 
-  return <div className="sbList">{superbowls}</div>;
+  return (
+    <div className="sbList">
+      <div className="container">
+        <form>
+          <input type="search" placeholder="enter a name"></input>
+        </form>
+      </div>
+      {superbowls}
+    </div>
+  );
 }
 
 export default SBLIst;

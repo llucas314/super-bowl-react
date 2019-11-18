@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import "./SBGame.css";
 function SBGame(props) {
   const [sbApi, setSbApi] = useState([]);
@@ -175,6 +174,7 @@ function SBGame(props) {
                     .toString()
                     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                 </p>
+
                 {sbApi.halftimePerformer.length > 1 ? (
                   <p className="lead">
                     Pregame & Halftime Performers:{" "}
