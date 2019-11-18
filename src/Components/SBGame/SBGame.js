@@ -49,7 +49,7 @@ function SBGame(props) {
     return Array(+digits.join("") + 1).join("M") + roman;
   }
 
-  const url = `http://localhost:8080/superbowls/${props.match.params.id}`;
+  const url = `https://super-bowl-api.herokuapp.com/superbowls/${props.match.params.id}`;
   const fetchApi = async () => {
     const data = await fetch(url);
     const items = await data.json();
