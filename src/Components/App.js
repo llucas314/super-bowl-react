@@ -19,7 +19,7 @@ class App extends Component {
           <Route path="/superbowls" exact component={SBLIst}></Route>
           <Route path="/" exact component={Home}></Route>
           <Route
-            path="/superbowls/:id"
+            path="/superbowls/games/:id"
             render={props => <SBGame {...props} />}
           ></Route>
           <Route component={NoMatchPage} />

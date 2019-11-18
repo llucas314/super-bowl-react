@@ -1,8 +1,10 @@
 .home {
-  background-image: url("../../images/dave-adamson--nATH0CrkMU-unsplash.jpg");
-  background-position: transform;
+  background-color: #000000d8;
+  background-image: url("../../images/smb-article-nfl-masthead-lg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-blend-mode: multiply;
-  background-color: #626d71;
   color: #cdcdc0;
   height: 90vh;
 }
@@ -70,6 +72,7 @@
 }
 
 .home .main .info .border-outer .border-inner p {
+  font-family: "Roboto Slab", serif;
   max-width: 40vw;
   text-align: justify;
   font-size: 1.4em;

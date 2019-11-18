@@ -61,7 +61,7 @@ function SBLIst() {
     return Array(+digits.join("") + 1).join("M") + roman;
   }
   const superbowls = sortedBowls.map(superbowl => (
-    <Link to={"/superbowls/" + superbowl._id}>
+    <Link to={"/superbowls/games/" + superbowl._id}>
       <div
         className="container-fluid background"
         key={superbowl.super_bowl}

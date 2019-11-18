@@ -43,8 +43,8 @@ function Home() {
                 for the coveted Vince Lombardi Trophy. The Super Bowl's
                 popularity has turned game days into unofficial holiday in the
                 United States that boasts the most-watched television broadcast
-                of the year and second-largest day for food consumption in the
-                U.S, just behind Thanksgiving.
+                of the year and second-largest day for U.S. food consumption,
+                just behind Thanksgiving.
               </p>
 
               <Link to="/superbowls">

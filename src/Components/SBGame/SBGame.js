@@ -101,9 +101,14 @@ function SBGame(props) {
                   <br />
                   Quarterback: {sbApi.qb_winner[0]}
                 </p>
-                <button href="#" className="btn ">
+                <a
+                  href={"https://" + sbApi.teams[0].website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn "
+                >
                   See More
-                </button>
+                </a>
               </div>
               <div className="card" style={{ width: "18rem" }}>
                 <img
@@ -135,9 +140,14 @@ function SBGame(props) {
                   <br />
                   Quarterback: {sbApi.qb_loser[0]}
                 </p>
-                <button href="#" className="btn ">
+                <a
+                  href={"https://" + sbApi.teams[1].website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn "
+                >
                   See More
-                </button>
+                </a>
               </div>
             </div>
           </div>
