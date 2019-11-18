@@ -4,9 +4,11 @@ This repository is a website about Super Bowl Facts. It pulls information from a
 
 ## Screenshots
 
-![superBowl](./images/super_bowl_0.png)
+![superBowl](./src/images/homepage.png)
 
-![superBowl](./images/super_bowl_1.png)
+![superBowl](./src/images/list.png)
+
+![superBowl](./src/images/details.png)
 
 ## Built With
 
