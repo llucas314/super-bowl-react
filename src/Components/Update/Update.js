@@ -34,7 +34,7 @@ export default class Update extends Component {
   };
   deleteHandler = e => {
     e.preventDefault();
-    fetch(`http://localhost:8080/superbowls/${this.state._id}`, {
+    fetch(`https://super-bowl-api.herokuapp.com/${this.state._id}`, {
       method: "DELETE"
     })
       .then(response => {

@@ -10,7 +10,7 @@ function SBLIst() {
     }
   });
 
-  const url = "http://localhost:8080/superbowls";
+  const url = "https://super-bowl-api.herokuapp.com/superbowls";
   const fetchApi = async () => {
     const data = await fetch(url);
     const items = await data.json();

@@ -23,7 +23,7 @@ export default class Create extends Component {
 
   submitHandler = event => {
     event.preventDefault();
-    const url = `http://localhost:8080/superbowls`;
+    const url = `https://super-bowl-api.herokuapp.com/superbowls`;
     console.log(url);
     axios
       .post(url, {
