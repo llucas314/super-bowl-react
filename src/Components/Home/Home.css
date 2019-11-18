@@ -1,9 +1,9 @@
 .home {
-  background-color: #000000d8;
   background-image: url("../../images/smb-article-nfl-masthead-lg.jpg");
-  background-position: center;
+  background-color: #000000d8;
+  background-position: top right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 150% 80%;
   background-blend-mode: multiply;
   color: #cdcdc0;
   height: 90vh;
@@ -30,8 +30,7 @@
           animation: move 5s infinite 1s;
 }
 
-.home .title,
-.home .sub {
+.home .title {
   height: 20vh;
 }
 

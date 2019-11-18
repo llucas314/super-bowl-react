@@ -5,12 +5,7 @@ import "./Home.css";
 function Home() {
   return (
     <div className="container-fluid home">
-      {/* <div className="row">
-        <div className="col-12 d-flex justify-content-center title">
-          <h1>Super Bowl Center</h1>
-        </div>
-      </div> */}
-      <div className="row">
+      <div className="row title">
         <div className="col-12 d-flex justify-content-center align-items-center sub">
           <div className="text">
             <p>ALL THE</p>
@@ -27,7 +22,6 @@ function Home() {
               </div>
             </b>
           </div>
-          {/* <h3>ALL THE GAMES ! ALL THE PERFORMANCES ! ALL IN ONE PLACE !</h3> */}
         </div>
       </div>
       <div className="row main">
