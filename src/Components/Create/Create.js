@@ -7,7 +7,7 @@ export default class Create extends Component {
 
     this.state = {
       date: "",
-      super_bowl: 0,
+      super_bowl: 53,
       venue: {
         name: ""
       },
@@ -23,12 +23,15 @@ export default class Create extends Component {
 
   submitHandler = event => {
     event.preventDefault();
-    const url = `http://localhost:8080/superbowls/${this.state._id}`;
+    const url = `http://localhost:8080/superbowls`;
     console.log(url);
     axios
       .post(url, {
         date: this.state.date,
-        city: this.state.city
+        city: this.state.city,
+        state: this.state.state,
+        super_bowl: this.state.super_bowl,
+        venue: { name: this.state.venue.name }
       })
       .then(res => {
         console.log(res);
@@ -37,7 +40,7 @@ export default class Create extends Component {
   };
 
   render() {
-    const { date, city } = this.state;
+    const { date, city, state, super_bowl, venue } = this.state;
     return (
       <div>
         <h1>Create A New Game</h1>
@@ -57,6 +60,33 @@ export default class Create extends Component {
               name="city"
               placeholder="City"
               value={city}
+              onChange={this.updateStats}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="state"
+              placeholder="State"
+              value={state}
+              onChange={this.updateStats}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="super_bowl"
+              placeholder="Super Bowl"
+              value={super_bowl}
+              onChange={this.updateStats}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="venue"
+              placeholder="Venue"
+              value={venue.name}
               onChange={this.updateStats}
             />
           </div>
