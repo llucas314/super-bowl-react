@@ -189,7 +189,7 @@ function SBGame(props) {
                     </div>
                   </p>
                 ) : (
-                  <p>
+                  <p className="lead">
                     Halftime Performer: {sbApi.halftimePerformer[0].musician}
                   </p>
                 )}

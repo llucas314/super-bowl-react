@@ -4,12 +4,12 @@ import "./SBList.css";
 
 function SBLIst() {
   const [sbApi, setSbApi] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
   useEffect(() => {
     if (sbApi.length === 0) {
       fetchApi();
     }
   });
+
   const url = "http://localhost:8080/superbowls";
   const fetchApi = async () => {
     const data = await fetch(url);
@@ -61,7 +61,6 @@ function SBLIst() {
     while (i--) roman = (key[+digits.pop() + i * 10] || "") + roman;
     return Array(+digits.join("") + 1).join("M") + roman;
   }
-  sortedBowls.forEach(superbowl => (superbowl.isSearchable = true));
 
   const superbowls = sortedBowls.map(superbowl => (
     <Link to={"/superbowls/games/" + superbowl._id} key={superbowl.super_bowl}>
@@ -122,16 +121,7 @@ function SBLIst() {
     </Link>
   ));
 
-  return (
-    <div className="sbList">
-      <div className="container">
-        <form>
-          <input type="search" placeholder="enter a name"></input>
-        </form>
-      </div>
-      {superbowls}
-    </div>
-  );
+  return <div className="sbList">{superbowls}</div>;
 }
 
 export default SBLIst;
