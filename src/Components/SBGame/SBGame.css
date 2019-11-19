@@ -1,5 +1,5 @@
 .games {
-  height: 90vh;
+  max-height: 90vh;
   background-color: #626d71;
   color: #cdcdc0;
 }
