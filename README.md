@@ -23,7 +23,7 @@ If you have any comments or suggestions please feel free to contact me through g
 
 ## Future Additions
 
-I would like to improve the searching capabilities and have full CRUD capabilities.
+I would like to improve the searching capabilities.
 
 ## Credit
 
