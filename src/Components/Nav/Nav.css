@@ -21,4 +21,27 @@
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+
+@media only screen and (max-width: 414px) {
+  .nav {
+    height: 10vh;
+    background-color: #626d71;
+  }
+  .nav .link {
+    color: #cdcdc0;
+  }
+  .nav .link img {
+    height: 7vh;
+    margin: 0 20px 0 0;
+  }
+  .nav .link h2 {
+    font-size: 1em;
+    -webkit-transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .nav .link h2:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
 /*# sourceMappingURL=Nav.css.map */

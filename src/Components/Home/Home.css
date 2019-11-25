@@ -175,4 +175,169 @@
     color: #f12424;
   }
 }
+
+@media only screen and (max-width: 414px) {
+  .home {
+    background-image: url("../../images/smb-article-nfl-masthead-lg.jpg");
+    background-color: #000000d8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #cdcdc0;
+    height: 90vh;
+  }
+  .home .text {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+    letter-spacing: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 25px;
+  }
+  .home .text b {
+    padding-left: 10px;
+    height: 35px;
+    overflow: hidden;
+  }
+  .home .text b .rotate {
+    -webkit-animation: move 5s infinite 1s;
+            animation: move 5s infinite 1s;
+  }
+  .home .title {
+    height: 20vh;
+  }
+  .home .main {
+    height: 70vh;
+  }
+  .home .main .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-right: 10px;
+  }
+  .home .main .info .border-outer {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid #ddbc95;
+    padding: 10px;
+  }
+  .home .main .info .border-outer .border-inner {
+    border: 2px solid #ddbc95;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home .main .info .border-outer .border-inner p {
+    font-family: "Roboto Slab", serif;
+    max-width: 40vw;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1em;
+    margin: 15px 0;
+  }
+  .home .main .info .border-outer .border-inner h2 {
+    margin: 5px;
+    text-align: center;
+    border-bottom: 1px solid #cdcdc0;
+  }
+  .home .main .info .border-outer .border-inner .btn {
+    background-color: #ddbc95;
+    border: #ddbc95;
+    -webkit-transition: -webkit-transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: -webkit-transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .home .main .info .border-outer .border-inner .btn:hover {
+    background-color: #b38867;
+    border: #b38867;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .home .main .player {
+    background-image: url("../../images/tom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @-webkit-keyframes move {
+    0% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      color: #f12424;
+    }
+    20% {
+      -webkit-transform: translateY(-35px);
+              transform: translateY(-35px);
+      color: #f12424;
+    }
+    40% {
+      -webkit-transform: translateY(-73px);
+              transform: translateY(-73px);
+      color: #f12424;
+    }
+    60% {
+      -webkit-transform: translateY(-110px);
+              transform: translateY(-110px);
+      color: #f12424;
+    }
+    80% {
+      -webkit-transform: translateY(-160px);
+              transform: translateY(-160px);
+      color: transparent;
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      color: #f12424;
+    }
+  }
+  @keyframes move {
+    0% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      color: #f12424;
+    }
+    20% {
+      -webkit-transform: translateY(-35px);
+              transform: translateY(-35px);
+      color: #f12424;
+    }
+    40% {
+      -webkit-transform: translateY(-73px);
+              transform: translateY(-73px);
+      color: #f12424;
+    }
+    60% {
+      -webkit-transform: translateY(-110px);
+              transform: translateY(-110px);
+      color: #f12424;
+    }
+    80% {
+      -webkit-transform: translateY(-160px);
+              transform: translateY(-160px);
+      color: transparent;
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      color: #f12424;
+    }
+  }
+}
 /*# sourceMappingURL=Home.css.map */
