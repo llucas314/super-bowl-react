@@ -16,6 +16,7 @@ export default class Create extends Component {
       teamOne: "",
       teamTwo: ""
     };
+
     this.updateStats = this.updateStats.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
   }
