@@ -17,8 +17,8 @@ export default class Create extends Component {
       teamTwo: ""
     };
 
-    this.updateStats = this.updateStats.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
+    // this.updateStats = this.updateStats.bind(this);
+    // this.submitHandler = this.submitHandler.bind(this);
   }
   updateStats = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -27,7 +27,6 @@ export default class Create extends Component {
   submitHandler = event => {
     event.preventDefault();
     const url = `https://super-bowl-api.herokuapp.com/superbowls`;
-    console.log(url);
     axios
       .post(url, {
         venue: {
@@ -79,9 +78,6 @@ export default class Create extends Component {
           rating_household: 0,
           ad_cost: 5000000
         }
-      })
-      .then(res => {
-        console.log(res);
       })
       .then(alert("Game Created"))
       .catch(err => console.log(err));

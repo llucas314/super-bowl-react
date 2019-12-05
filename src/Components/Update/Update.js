@@ -22,14 +22,10 @@ export default class Update extends Component {
   submitHandler = event => {
     event.preventDefault();
     const url = `https://super-bowl-api.herokuapp.com/superbowls/${this.state._id}`;
-    console.log(url);
     axios
       .put(url, {
         date: this.state.date,
         city: this.state.city
-      })
-      .then(res => {
-        console.log(res);
       })
       .then(alert("Game Updated"))
       .catch(err => console.log(err));
@@ -39,9 +35,6 @@ export default class Update extends Component {
     fetch(`https://super-bowl-api.herokuapp.com/superbowls/${this.state._id}`, {
       method: "DELETE"
     })
-      .then(response => {
-        console.log("response", response);
-      })
       .then(alert("Game Deleted"))
       .catch(error => {
         console.log("error", error);

@@ -54,8 +54,6 @@ function SBGame(props) {
   const fetchApi = async () => {
     const data = await fetch(url);
     const items = await data.json();
-    console.log(items);
-    // const superbowls = items.map(item => item);
     setSbApi(items);
     setIsLoading(false);
   };
