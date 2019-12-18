@@ -1,5 +1,6 @@
 .create {
   height: 90vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +38,39 @@
           align-items: center;
 }
 
-.create form input {
+.create form .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create form input,
+.create form select {
   border-radius: 5px;
+  width: 100%;
+  margin: 5px;
+  background-color: white;
+}
+
+.create form .submit-button {
+  background-color: rgba(161, 19, 19, 0.651);
+  color: white;
+  font-size: 20px;
+  -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  border: none;
+}
+
+.create form .submit-button:hover {
+  background-color: #a11313;
 }
 /*# sourceMappingURL=Create.css.map */
