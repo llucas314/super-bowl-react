@@ -5,7 +5,7 @@ import logo from "../../images/lombardi.png";
 
 function Nav() {
   return (
-    <div className="row nav">
+    <div className=" nav">
       <nav className=" container d-flex align-items-center justify-content-between">
         <Link to="/" className="link d-flex align-items-center">
           <img src={logo} alt="Super Bowl Center Logo" />
