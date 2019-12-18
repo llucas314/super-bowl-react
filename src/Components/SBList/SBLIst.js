@@ -14,7 +14,6 @@ function SBLIst() {
   const fetchApi = async () => {
     const data = await fetch(url);
     const items = await data.json();
-    console.log(items);
     const superbowls = items.map(item => item);
     setSbApi(superbowls);
   };

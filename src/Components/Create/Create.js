@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 import logo from "../../images/nfl-3644686_640.png";
 import "./Create.css";
 
@@ -154,7 +155,6 @@ export default class Create extends Component {
   submitHandler = event => {
     event.preventDefault();
     const url = `https://super-bowl-api.herokuapp.com/superbowls`;
-    console.log(url);
     axios
       .post(url, {
         venue: {
@@ -207,10 +207,10 @@ export default class Create extends Component {
           ad_cost: 5000000
         }
       })
-      .then(res => {
-        console.log(res);
+      .then(() => {
+        alert("Game Created");
+        return () => <Redirect to="/superbowls" />;
       })
-      .then(alert("Game Created"))
       .catch(err => console.log(err));
   };
 
