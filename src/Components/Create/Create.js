@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 import logo from "../../images/nfl-3644686_640.png";
 import "./Create.css";
 
@@ -154,7 +155,6 @@ export default class Create extends Component {
   submitHandler = event => {
     event.preventDefault();
     const url = `https://super-bowl-api.herokuapp.com/superbowls`;
-    console.log(url);
     axios
       .post(url, {
         venue: {
@@ -207,10 +207,10 @@ export default class Create extends Component {
           ad_cost: 5000000
         }
       })
-      .then(res => {
-        console.log(res);
+      .then(() => {
+        alert("Game Created");
+        return () => <Redirect to="/superbowls" />;
       })
-      .then(alert("Game Created"))
       .catch(err => console.log(err));
   };
 
@@ -229,6 +229,7 @@ export default class Create extends Component {
         <h1>Create A New Game</h1>
         <form onSubmit={this.submitHandler}>
           <div className="form-container">
+            <label for="date">Date</label>
             <input
               type="date"
               name="date"
@@ -237,6 +238,7 @@ export default class Create extends Component {
               onChange={this.updateStats}
               required
             />
+            <label for="city">City</label>
             <input
               type="text"
               name="city"
@@ -245,6 +247,7 @@ export default class Create extends Component {
               onChange={this.updateStats}
               required
             />
+            <label for="state">State</label>
             <select
               name="state"
               placeholder="State"
@@ -258,6 +261,7 @@ export default class Create extends Component {
                 </option>
               ))}
             </select>
+            <label for="super_bowl">Super Bowl Number</label>
             <input
               type="number"
               name="super_bowl"
@@ -268,6 +272,7 @@ export default class Create extends Component {
               onChange={this.updateStats}
               required
             />
+            <label for="venueName">Stadium</label>
             <select
               name="venueName"
               placeholder="Venue"
@@ -281,6 +286,7 @@ export default class Create extends Component {
                 </option>
               ))}
             </select>
+            <label for="teamOne">Team One</label>
             <select
               name="teamOne"
               placeholder="Team One"
@@ -294,6 +300,7 @@ export default class Create extends Component {
                 </option>
               ))}
             </select>
+            <label for="teamTwo">Team Two</label>
             <select
               name="teamTwo"
               placeholder="Team Two"

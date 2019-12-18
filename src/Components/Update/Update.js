@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
+
 import "./Update.css";
 
 export default class Update extends Component {
@@ -28,10 +30,10 @@ export default class Update extends Component {
         date: this.state.date,
         city: this.state.city
       })
-      .then(res => {
-        console.log(res);
+      .then(() => {
+        alert("Game Updated");
+        return () => <Redirect to="/superbowls" />;
       })
-      .then(alert("Game Updated"))
       .catch(err => console.log(err));
   };
   deleteHandler = e => {
@@ -39,10 +41,10 @@ export default class Update extends Component {
     fetch(`https://super-bowl-api.herokuapp.com/superbowls/${this.state._id}`, {
       method: "DELETE"
     })
-      .then(response => {
-        console.log("response", response);
+      .then(() => {
+        alert("Game Deleted");
+        return () => <Redirect to="/superbowls" />;
       })
-      .then(alert("Game Deleted"))
       .catch(error => {
         console.log("error", error);
       });
