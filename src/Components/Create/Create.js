@@ -103,7 +103,7 @@ export default class Create extends Component {
         <form onSubmit={this.submitHandler}>
           <div>
             <input
-              type="text"
+              type="date"
               name="date"
               placeholder="Date"
               value={date}
