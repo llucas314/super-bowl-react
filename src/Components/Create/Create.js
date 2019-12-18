@@ -10,7 +10,7 @@ export default class Create extends Component {
     this.state = {
       date: "",
       super_bowl: 53,
-      venueName: "",
+      venueName: "Arrowhead Stadium",
       city: "",
       state: "Alabama",
       teamOne: "Arizona Cardinals",
