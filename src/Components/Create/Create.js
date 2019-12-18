@@ -9,12 +9,139 @@ export default class Create extends Component {
 
     this.state = {
       date: "",
-      super_bowl: null,
+      super_bowl: 53,
       venueName: "",
       city: "",
-      state: "",
-      teamOne: "",
-      teamTwo: ""
+      state: "Alabama",
+      teamOne: "Arizona Cardinals",
+      teamTwo: "Atlanta Falcons",
+      statesList: [
+        "Alabama",
+        "Alaska",
+        "American Samoa",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "District of Columbia",
+        "Federated States of Micronesia",
+        "Florida",
+        "Georgia",
+        "Guam",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Marshall Islands",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Northern Mariana Islands",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Palau",
+        "Pennsylvania",
+        "Puerto Rico",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virgin Island",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+      ],
+      teamsList: [
+        "Arizona Cardinals",
+        "Atlanta Falcons",
+        "Baltimore Ravens",
+        "Buffalo Bills",
+        "Carolina Panthers",
+        "Chicago Bears",
+        "Cincinnati Bengals",
+        "Cleveland Browns",
+        "Dallas Cowboys",
+        "Denver Broncos",
+        "Detroit Lions",
+        "Green Bay Packers",
+        "Houston Texans",
+        "Indianapolis Colts",
+        "Jacksonville Jaguars",
+        "Kansas City Chiefs",
+        "Los Angeles Chargers",
+        "Los Angeles Rams",
+        "Miami Dolphins",
+        "Minnesota Vikings",
+        "New England Patriots",
+        "New Orleans Saints",
+        "New York Giants",
+        "New York Jets",
+        "Oakland Raiders",
+        "Philadelphia Eagles",
+        "Pittsburgh Steelers",
+        "San Francisco 49ers",
+        "Seattle Seahawks",
+        "Tampa Bay Buccaneers",
+        "Tennessee Titans",
+        "Washington Redskins"
+      ],
+      stadiums: [
+        "Arrowhead Stadium",
+        "Everbank Field",
+        "Gillette Stadium",
+        "Hard Rock Stadium",
+        "Heinz Field",
+        "Lucas Oil Stadium",
+        "M&T Bank Stadium",
+        "MetLife Stadium",
+        "AFC New Era Field",
+        "Nissan Stadium",
+        "NRG Stadium",
+        "Oakland Coliseum",
+        "Paul Brown Stadium",
+        "Sports Authority Field",
+        "Stubhub Center",
+        "AT&T Stadium",
+        "Bank of America Stadium",
+        "CenturyLink Field",
+        "FedEx Field",
+        "Ford Field",
+        "Lincoln Financial Field",
+        "Los Angeles Coliseum",
+        "Levi's Stadium",
+        "Mercedes-Benz Stadium",
+        "Mercedes-Benz Superdome",
+        " MetLife Stadium",
+        "Raymond James Stadium",
+        "Soldier Field",
+        "Univeristy of Phoenix Stadium",
+        "US Bank Stadium"
+      ]
     };
 
     this.updateStats = this.updateStats.bind(this);
@@ -101,71 +228,89 @@ export default class Create extends Component {
       <div className="create">
         <h1>Create A New Game</h1>
         <form onSubmit={this.submitHandler}>
-          <div>
+          <div className="form-container">
             <input
-              type="text"
+              type="date"
               name="date"
               placeholder="Date"
               value={date}
               onChange={this.updateStats}
+              required
             />
-          </div>
-          <div>
             <input
               type="text"
               name="city"
               placeholder="City"
               value={city}
               onChange={this.updateStats}
+              required
             />
-          </div>
-          <div>
-            <input
-              type="text"
+            <select
               name="state"
               placeholder="State"
               value={state}
               onChange={this.updateStats}
-            />
-          </div>
-          <div>
+              required
+            >
+              {this.state.statesList.map(stateName => (
+                <option value={stateName} key={stateName}>
+                  {stateName}
+                </option>
+              ))}
+            </select>
             <input
-              type="text"
+              type="number"
               name="super_bowl"
               placeholder="Super Bowl Number"
+              min="1"
+              max="100"
               value={super_bowl}
               onChange={this.updateStats}
+              required
             />
-          </div>
-          <div>
-            <input
-              type="text"
+            <select
               name="venueName"
               placeholder="Venue"
               value={venueName}
               onChange={this.updateStats}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
+              required
+            >
+              {this.state.stadiums.map(stadium => (
+                <option key={stadium} value={stadium}>
+                  {stadium}
+                </option>
+              ))}
+            </select>
+            <select
               name="teamOne"
               placeholder="Team One"
               value={teamOne}
               onChange={this.updateStats}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
+              required
+            >
+              {this.state.teamsList.map(team => (
+                <option key={team} value={team}>
+                  {team}
+                </option>
+              ))}
+            </select>
+            <select
               name="teamTwo"
               placeholder="Team Two"
               value={teamTwo}
               onChange={this.updateStats}
-            />
+              required
+            >
+              {" "}
+              {this.state.teamsList.map(team => (
+                <option key={team} value={team}>
+                  {team}
+                </option>
+              ))}
+            </select>
           </div>
 
-          <button type="submit">Update</button>
+          <input className="submit-button" type="submit" value="Update" />
         </form>
       </div>
     );

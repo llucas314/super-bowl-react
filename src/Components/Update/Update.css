@@ -33,6 +33,8 @@
 }
 
 .update form input {
+  width: 100%;
   border-radius: 5px;
+  margin: 5px;
 }
 /*# sourceMappingURL=Update.css.map */
