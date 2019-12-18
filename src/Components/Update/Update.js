@@ -56,14 +56,13 @@ export default class Update extends Component {
           <form onSubmit={this.submitHandler}>
             <div>
               <input
-                type="text"
+                type="date"
                 name="date"
                 placeholder="Date"
                 value={date}
                 onChange={this.updateStats}
               />
-            </div>
-            <div>
+
               <input
                 type="text"
                 name="city"
